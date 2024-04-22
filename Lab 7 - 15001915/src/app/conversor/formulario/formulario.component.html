@@ -1,0 +1,12 @@
+<form class="form-group" (ngSubmit)="enviar()">
+    <label for="grados">Grados:</label>
+    <input class="form-control" type="number" id="grados" name="grados" [(ngModel)]="grados" required>
+
+    <label for="tipoGrados" class="mt-2">Tipo de Grados:</label>
+    <select class="form-control" id="tipoGrados" name="tipoGrados" [(ngModel)]="tipoGrados" required>
+        <option value="F">Fahrenheit</option>
+        <option value="C">Celsius</option>
+    </select>
+
+    <button class="btn btn-primary mt-2" type="submit">Guardar</button>
+</form>

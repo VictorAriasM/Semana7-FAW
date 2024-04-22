@@ -1,0 +1,23 @@
+<h2>Conversión</h2>
+
+<app-formulario (enviarData)="convertir($event)"></app-formulario>
+
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Celsius</th>
+            <th scope="col">Fahrenheit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (grado of arregloGrados; track grado.id) {
+        <tr>
+            <td>{{ grado.c }}</td>
+            <td>{{ grado.f }}</td>
+            <button class="btn" (click)="borrar(grado.id)">
+                <img src="assets/borrar.png" alt="Borrar" width="20" height="20">
+            </button>
+        </tr>
+        }
+    </tbody>
+</table>

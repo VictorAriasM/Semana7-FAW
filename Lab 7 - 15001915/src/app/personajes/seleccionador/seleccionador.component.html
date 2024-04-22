@@ -1,0 +1,10 @@
+<label for="personajesSelect" class="form-label">Personajes:</label>
+<select #seleccionador id="personajesSelect" class="form-select">
+    @for (personaje of personajes; track personaje) {
+    <option value="{{ personaje }}">{{ personaje }}</option>
+    }
+</select>
+
+@if (personajeSeleccionado) {
+<button (click)="seleccionarPersonaje(seleccionador.value)" class="btn btn-primary mt-2">Mostrar</button>
+}
